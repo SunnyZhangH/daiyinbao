@@ -18,7 +18,7 @@
     <div><h2 style="color: blue;font-style: inherit;font-size: 50px;text-align: center">贷银宝系统</h2></div>
     <div style="">
     账号:&nbsp;<input type="text" style="height: 30px" placeholder="&nbsp;请输入账号" ></br></br>
-    密码:&nbsp;<input type="password" style="height: 30px" placeholder="&nbsp;请输入密码" id="pasdWriter"><span id="wenzi" style="color: black;font-family: 宋体;font-size: 12px;"></span></br></br>
+    <font id="wenzi" style="color: black;font-family: 宋体;">密码:</font><input type="password" style="height: 30px" placeholder="&nbsp;请输入密码" id="pasdWriter"></br></br>
 
     验证:&nbsp;<input type="text" style="height: 30px" placeholder="&nbsp;请输入验证"></br></br>
     </div>
@@ -39,10 +39,10 @@
     biaodan.onblur=function (){
         //根据表单值的长度
         if (this.value.length<6||this.value.length>10){
-            wenzi.innerText='不合规范';
+            wenzi.innerText='密码:';
             wenzi.style.color='red';
         }else {
-            wenzi.innerText='符合规范';
+            wenzi.innerText='密码:';
             wenzi.style.color='green';
         }
     }
