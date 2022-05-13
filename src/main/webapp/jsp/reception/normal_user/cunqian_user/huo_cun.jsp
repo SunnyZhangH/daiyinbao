@@ -11,6 +11,7 @@
     <title>Title</title>
 </head>
 <body style="background-color:#dae8de;text-align: center;" >
+<div><strong style="color: green;font-style: inherit;font-size: 30px;text-align: center" id="time"></strong></div>
 <div><h2 style="color: blue;font-style: inherit;font-size: 50px;text-align: center">贷银宝系统</h2></div>
 <div style="width: 100%;height: 200px;float: left;padding-top: 10%;">
 
@@ -18,5 +19,18 @@
     <div style="width: 300px;height: 300px; background-color: whitesmoke;float: left;margin-left: 30px;"><p>项目二</p></div>
     <div style="width: 300px;height: 300px; background-color: whitesmoke;float: left;margin-left: 30px;"><p>项目三</p></div>
 </div>
+<script>
+    var date = new Date();
+    var hours = date.getHours();
+    if (hours < 12) {
+        document.getElementById('time').innerHTML = '-早上好-';
+
+    } else if (hours < 18) {
+        document.getElementById('time').innerText = '-下午好-';
+    } else {
+        document.getElementById('time').innerHTML = '-晚上好-';
+
+    }
+</script>
 </body>
 </html>
