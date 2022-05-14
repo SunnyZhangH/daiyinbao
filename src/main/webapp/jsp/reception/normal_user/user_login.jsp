@@ -15,7 +15,7 @@
 <body style="background-color:#dae8de" id="beijingse">
 <div style="text-align: center;padding-top: 17%;">
     <div><strong style="color: green;font-style: inherit;font-size: 30px;text-align: center" id="time"></strong></div>
-    <div><h2 style="color: blue;font-style: inherit;font-size: 50px;text-align: center">贷银宝系统</h2></div>
+    <div><h2 style="color: blue;font-style: inherit;font-size: 50px;text-align: center">贷银宝系统-</h2></div>
     <div style="">
     账号:&nbsp;<input type="text" style="height: 30px" placeholder="&nbsp;请输入账号" ></br></br>
     <font id="wenzi" style="color: black;font-family: 宋体;">密码:</font><input type="password" style="height: 30px" placeholder="&nbsp;请输入密码" id="pasdWriter"></br></br>
