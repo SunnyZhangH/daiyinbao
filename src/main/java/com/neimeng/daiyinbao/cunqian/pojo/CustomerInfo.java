@@ -1,4 +1,4 @@
-package com.neimeng.daiyinbao.login.pojo;
+package com.neimeng.daiyinbao.cunqian.pojo;
 
 public class CustomerInfo {
 
