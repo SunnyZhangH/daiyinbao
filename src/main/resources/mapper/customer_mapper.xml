@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neimeng.daiyinbao.cunqian.dao.ICustomerDao">
+      <resultMap id="CustomerResultMap" type="com.neimeng.daiyinbao.cunqian.pojo.CustomerInfo">
+          <id column="customer_id" property="customerId" jdbcType="INTEGER" javaType="int"/>
+          <result column="customer_name" property="customerName" jdbcType="VARCHAR" javaType="String"/>
+          <result column="customer_pwd" property="customerPwd" jdbcType="VARCHAR" javaType="String"/>
+          <result column="customer_sex" property="customerSex" jdbcType="BOOLEAN" javaType="boolean"/>
+          <result column="customer_cardId" property="customerCardID" jdbcType="VARCHAR" javaType="String"/>
+          <result column="customer_age" property="customerAge" jdbcType="INTEGER" javaType="int"/>
+          <result column="customer_tel" property="customerTel" jdbcType="INTEGER" javaType="int"/>
+          <result column="img" property="Img" jdbcType="VARCHAR" javaType="String"/>
+          <result column="customer_state" property="State" jdbcType="VARCHAR" javaType="String"/>
+          <result column="customer_account" property="customerAccount" jdbcType="DOUBLE" javaType="double"/>
+          <result column="customer_credit" property="customerCredit" jdbcType="VARCHAR" javaType="String"/>
+          <result column="customer_borlimit" property="customerBorlimit" jdbcType="DOUBLE" javaType="double"/>
+          <result column="customer_loan" property="customerLoan" jdbcType="DOUBLE" javaType="double"/>
+          <result column="customer_bormoney" property="customerBormoney" jdbcType="DOUBLE" javaType="double"/>
+          <result column="customer_borlistate" property="customerBorlistate" jdbcType="VARCHAR" javaType="String"/>
+          <result column="customer_depstate" property="customerDepstate" jdbcType="VARCHAR" javaType="String"/>
+          <result column="customer_crestate" property="customerCrestate" jdbcType="BOOLEAN" javaType="boolean"/>
+          <result column="customer_cresta_time" property="customerCrestaTime" jdbcType="VARCHAR" javaType="String"/>
+      </resultMap>
+    
+      <select id="findCustomer" resultMap="CustomerResultMap">
+           select * from customer_info
+          <where>
+              <if test="customerId!=0">customer_id=#{customerId}</if>
+              <if test="customerName!=null">customer_name=#{customerName}</if>
+              <if test="customerPwd!=null">customer_pwd=#{customerPwd}</if>
+              <if test="customerTel!=0">customer_tel=#{customerTel}</if>
+              <if test="customerCardID!=null">customer_cardId=#{customerCardID}</if>
+          </where>
+      </select>
+    
+      <select id="findAllCustomer" resultMap="CustomerResultMap" resultType="java.util.ArrayList">
+          select * from customer_info
+      </select>
+
+      <insert id="addCustomer">
+          insert into customer_info value (null,#{customerName},#{customerPwd},#{customerSex},#{customerCardID},
+              #{customerAge},#{customerTel},#{Img},#{State},0,100,0,0,0,
+              #{customerBorlistate},#{customerDepstate},#{customerCrestate},#{customerCrestaTime})
+      </insert>
+
+      <delete id="delCustomer">
+          delete from customer_info where customer_id=#{customerId}
+      </delete>
+
+      <update id="updateCustomer">
+          update customer_info
+          <trim prefix="set" suffixOverrides=",">
+              <if test="customerName!=null">customer_name=#{customerName}</if>
+              <if test="customerPwd!=null">customer_pwd=#{customerPwd}</if>
+              customer_sex=#{customerSex}
+              <if test="customerCardID!=null">customer_cardId=#{customerCardID}</if>
+              <if test="customerAge!=null">customer_age=#{customerAge}</if>
+              <if test="customerTel!=null">customer_tel=#{customerTel}</if>
+              <if test="Img!=null">img=#{Img}</if>
+              <if test="State!=null">customer_state=#{State}</if>
+              <if test="customerAccount!=null">customer_account=#{customerAccount}</if>
+              <if test="customerCredit!=null">customer_credit=#{customerCredit}</if>
+              <if test="customerBorlimit!=null">customer_borlimit=#{customerBorlimit}</if>
+              <if test="customerLoan!=null">customer_loan=#{customerLoan}</if>
+              <if test="customerBormoney!=null">customer_bormoney=#{customerBormoney}</if>
+              <if test="customerBorlistate!=null">customer_borlistate=#{customerBorlistate}</if>
+              <if test="customerDepstate!=null">customer_depstate=#{customerDepstate}</if>
+              customer_crestate=#{customerCrestate}
+              <if test="customerCrestaTime!=null">customer_cresta_time=#{customerCrestaTime}</if>
+          </trim>
+          where customer_id=#{customerId}
+      </update>
+
+
+</mapper>
