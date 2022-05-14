@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neimeng.daiyinbao.cunqian.dao.IGoodsTypeDao">
+    <resultMap id="goodsTypeResultMap" type="com.neimeng.daiyinbao.cunqian.dao.IGoodsTypeDao">
+
+        <id column="type_id" property="typeId"/>
+        <result column="type_name" property="typeName"/>
+        <result column="type_state" property="state"/>
+        <result column="total_money" property="totalMoney"/>
+        <result column="total_person" property="totalPerson"/>
+
+    </resultMap>
+
+    <select id="findGoodsType" resultMap="goodsTypeResultMap">
+        SELECT * FROM goods_type where ty_id=#{typeId};
+    </select>
+    <select id="findAllGoodsType" resultMap="goodsTypeResultMap" resultType="java.util.List">
+    SELECT * FROM goods_type
+    </select>
+
+    <insert id="addGoodsType ">
+        INSERT INTO goods_type
+        value (null,#{typeId},#{typeName},#{state},#{totalMoney},#{totalPerson})
+    </insert>
+    <delete id="delGoodsType">
+        delete
+        from goods_type
+        where ty_id=#{typeId}
+    </delete>
+
+    <update id="updateGoodsType">
+        update goods_type
+        <trim prefix="set" suffixOverrides=",">
+            <if test="typeName!=null" >type_name #{typeName}</if>
+            <if test="state!=null" >goods_state#{state }</if>
+            <if test="totalMoney!=null" >total_money #{totalMoney}</if>
+            <if test="totalPerson!=null" >total_person #{totalPerson}</if>
+        </trim>
+    </update>
+
+</mapper>
