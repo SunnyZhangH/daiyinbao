@@ -13,27 +13,27 @@
 
 </head>
 <body style="background-color:#dae8de;" id="bjs">
-<div style="text-align: center;padding-top: 10%;">
+<div style="text-align: center;padding-top: 10%;" >
   <div><strong style="color: green;font-style: inherit;font-size: 30px;text-align: center" id="time"></strong></div>
   <div><h2 style="color: blue;font-style: inherit;font-size: 50px;text-align: center" id="bt">贷银宝系统</h2></div>
 
-  <div style="">
-    账号:&nbsp;<input type="text" style="height: 30px" placeholder="&nbsp;请输入账号" ></br></br>
-    <font id="wenzi" style="color: black;font-family: 宋体;">密码:</font>&nbsp;<input type="password" style="height: 30px" placeholder="&nbsp;请输入6-10位密码" id="pasdWriter"></br></br>
-    姓名: <input type="text" style="height: 30px" placeholder="&nbsp;请输入真实姓名"></br></br>
+  <form action="${pageContext.request.contextPath}/customer/addCustomer" method="post">
+    <div style="">
+      账号:&nbsp;<input type="text" style="height: 30px" placeholder="&nbsp;请输入账号" name="customerCardID"></br></br>
+      <font id="wenzi" style="color: black;font-family: 宋体;">密码:</font>&nbsp;<input type="password" style="height: 30px" placeholder="&nbsp;请输入6-10位密码" id="pasdWriter" name="customerPwd"></br></br>
+      姓名: <input type="text" style="height: 30px" placeholder="&nbsp;请输入真实姓名" name="customerName"></br></br>
 
-    性别: <select style="width: 170px;height: 30px">
-            <option>男</option>
-            <option>女</option>
-        </select></br></br>
-    年龄: <input type="number" style="height: 30px" placeholder="&nbsp;请输入年龄"></br></br>
-    电话: <input type="number" style="height: 30px" placeholder="&nbsp;请输入11位电话"></br></br>
-    地址: <input type="text" style="height: 30px" placeholder="&nbsp;请输入详细地址"></br></br>
+      性别: <select style="width: 170px;height: 30px" name="customerSex">
+      <option value="1">男</option>
+      <option value="0">女</option>
+    </select></br></br>
+      年龄: <input type="number" style="height: 30px" placeholder="&nbsp;请输入年龄" name="customerAge"></br></br>
+      电话: <input type="number" style="height: 30px" placeholder="&nbsp;请输入11位电话" name="customerTel"></br></br>
 
+    </div>
+    <input type="submit" id="anniu" value="注册">
+  </form>
 
-  </div>
-  &nbsp;&nbsp;<a href="cunqian_user/cunqian_user.jsp" >注册</a>
-    <input type="button" id="anniu" value="注册">
 </div>
 
 

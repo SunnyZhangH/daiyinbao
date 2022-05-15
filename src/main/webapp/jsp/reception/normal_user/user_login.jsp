@@ -16,15 +16,16 @@
 <div style="text-align: center;padding-top: 17%;">
     <div><strong style="color: green;font-style: inherit;font-size: 30px;text-align: center" id="time"></strong></div>
     <div><h2 style="color: blue;font-style: inherit;font-size: 50px;text-align: center">贷银宝系统</h2></div>
-    <div style="">
-    账号:&nbsp;<input type="text" style="height: 30px" placeholder="&nbsp;请输入账号" ></br></br>
-    <font id="wenzi" style="color: black;font-family: 宋体;">密码:</font><input type="password" style="height: 30px" placeholder="&nbsp;请输入密码" id="pasdWriter"></br></br>
+    <form action="${pageContext.request.contextPath}/customer/customerLogin" method="post">
+        <div style="">
+            账号:&nbsp;<input type="text" style="height: 30px" placeholder="&nbsp;请输入账号" name="customerCardID"></br></br>
+            <font id="wenzi" style="color: black;font-family: 宋体;">密码:</font><input type="password" style="height: 30px" placeholder="&nbsp;请输入密码" id="pasdWriter" name="customerPwd"></br></br>
 
-    验证:&nbsp;<input type="text" style="height: 30px" placeholder="&nbsp;请输入验证"></br></br>
-    </div>
-<a href="cunqian_user/cunqian_user.jsp">登录</a> &nbsp;&nbsp;<a href="user_register.jsp">注册</a>
-    <a href="${pageContext.request.contextPath}/customer/findAll">登录1</a>
-    <a href="${pageContext.request.contextPath}/goodType/findAll">登录2</a>
+            验证:&nbsp;<input type="text" style="height: 30px" placeholder="&nbsp;请输入验证"></br></br>
+        </div>
+        <input type="submit" id="anniu" value="登录">
+    </form>
+
 
 </div>
 
