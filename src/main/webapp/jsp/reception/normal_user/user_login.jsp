@@ -23,7 +23,7 @@
     验证:&nbsp;<input type="text" style="height: 30px" placeholder="&nbsp;请输入验证"></br></br>
     </div>
 <a href="cunqian_user/cunqian_user.jsp">登录</a> &nbsp;&nbsp;<a href="user_register.jsp">注册</a>
-    <a href="${pageContext.request.contextPath}/customer/findAll">登录</a>
+    <a href="${pageContext.request.contextPath}/customer/findAll">登录1</a>
     <a href="${pageContext.request.contextPath}/goodType/findAll">登录2</a>
 
 </div>
