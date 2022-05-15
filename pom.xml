@@ -27,12 +27,6 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-jms</artifactId>
       <version>4.3.3.RELEASE</version>
@@ -180,9 +174,21 @@
       <artifactId>spring-web</artifactId>
       <version>4.3.3.RELEASE</version>
     </dependency>
+<!--计算字符串-->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-jexl3</artifactId>
+      <version>3.1</version>
+    </dependency>
+      <dependency>
+          <groupId>cn.hutool</groupId>
+          <artifactId>hutool-all</artifactId>
+          <version>5.7.11</version>
+      </dependency>
   </dependencies>
 
   <build>
+
     <finalName>daiyinbao</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
@@ -217,5 +223,8 @@
         </plugin>
       </plugins>
     </pluginManagement>
+    
   </build>
+
+
 </project>

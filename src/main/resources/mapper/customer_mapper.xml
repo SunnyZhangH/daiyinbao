@@ -39,7 +39,7 @@
       </select>
 
       <insert id="addCustomer">
-          insert into customer_info value (null,#{customerName},#{customerPwd},#{customerSex},#{customerCardID},
+          insert into customer_info values (null,#{customerName},#{customerPwd},#{customerSex},#{customerCardID},
               #{customerAge},#{customerTel},#{Img},#{State},0,100,0,0,0,
               0,0,0,0)
       </insert>

@@ -3,17 +3,17 @@ package com.neimeng.daiyinbao.cunqian.pojo;
 public class GoodsTypeInfo {
     private int typeId;
     private String typeName;
-    private String state;
-    private double totalMoney;
+    private String typeState;
+    private Double totalMoney;
     private int totalPerson;
 
     public GoodsTypeInfo() {
     }
 
-    public GoodsTypeInfo(int typeId, String typeName, String state, double totalMoney, int totalPerson) {
+    public GoodsTypeInfo(int typeId, String typeName, String typeState, Double totalMoney, int totalPerson) {
         this.typeId = typeId;
         this.typeName = typeName;
-        this.state = state;
+        this.typeState = typeState;
         this.totalMoney = totalMoney;
         this.totalPerson = totalPerson;
     }
@@ -34,19 +34,19 @@ public class GoodsTypeInfo {
         this.typeName = typeName;
     }
 
-    public String getState() {
-        return state;
+    public String getTypeState() {
+        return typeState;
     }
 
-    public void setState(String state) {
-        this.state = state;
+    public void setTypeState(String typeState) {
+        this.typeState = typeState;
     }
 
-    public double getTotalMoney() {
+    public Double getTotalMoney() {
         return totalMoney;
     }
 
-    public void setTotalMoney(double totalMoney) {
+    public void setTotalMoney(Double totalMoney) {
         this.totalMoney = totalMoney;
     }
 
