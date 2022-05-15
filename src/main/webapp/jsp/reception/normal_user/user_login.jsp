@@ -24,6 +24,7 @@
             验证:&nbsp;<input type="text" style="height: 30px" placeholder="&nbsp;请输入验证"></br></br>
         </div>
         <input type="submit" id="anniu" value="登录">
+        <a href="${pageContext.request.contextPath}/customer/showAdd">注册</a>
     </form>
 
 
