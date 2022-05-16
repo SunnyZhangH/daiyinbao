@@ -8,7 +8,7 @@ public class CustomerInfo {
     private boolean customerSex;
     private String customerCardID;
     private int customerAge;
-    private int customerTel;
+    private String customerTel;
     private String Img;
     private String State;
     private double customerAccount;
@@ -25,7 +25,7 @@ public class CustomerInfo {
 
     }
 
-    public CustomerInfo(int customerId, String customerName, String customerPwd, boolean customerSex, String customerCardID, int customerAge, int customerTel, String img, String state, double customerAccount, String customerCredit, double customerBorlimit, double customerLoan, double customerBormoney, String customerBorlistate, String customerDepstate, boolean customerCrestate, String customerCrestaTime) {
+    public CustomerInfo(int customerId, String customerName, String customerPwd, boolean customerSex, String customerCardID, int customerAge, String customerTel, String img, String state, double customerAccount, String customerCredit, double customerBorlimit, double customerLoan, double customerBormoney, String customerBorlistate, String customerDepstate, boolean customerCrestate, String customerCrestaTime) {
         this.customerId = customerId;
         this.customerName = customerName;
         this.customerPwd = customerPwd;
@@ -94,11 +94,11 @@ public class CustomerInfo {
         this.customerAge = customerAge;
     }
 
-    public int getCustomerTel() {
+    public String getCustomerTel() {
         return customerTel;
     }
 
-    public void setCustomerTel(int customerTel) {
+    public void setCustomerTel(String customerTel) {
         this.customerTel = customerTel;
     }
 
@@ -174,19 +174,19 @@ public class CustomerInfo {
         this.customerDepstate = customerDepstate;
     }
 
-    public String getCustomerCrestaTime() {
-        return customerCrestaTime;
-    }
-
-    public void setCustomerCrestaTime(String customerCrestaTime) {
-        this.customerCrestaTime = customerCrestaTime;
-    }
-
     public boolean isCustomerCrestate() {
         return customerCrestate;
     }
 
     public void setCustomerCrestate(boolean customerCrestate) {
         this.customerCrestate = customerCrestate;
+    }
+
+    public String getCustomerCrestaTime() {
+        return customerCrestaTime;
+    }
+
+    public void setCustomerCrestaTime(String customerCrestaTime) {
+        this.customerCrestaTime = customerCrestaTime;
     }
 }

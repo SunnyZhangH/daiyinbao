@@ -10,7 +10,7 @@
 <head>
     <title>Title</title>
 </head>
-<body style="background-color:#dae8de;text-align: center;" >
+<body style="background: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 100%);" >
 <div><strong style="color: green;font-style: inherit;font-size: 30px;text-align: center" id="time"></strong></div>
 <div><h2 style="color: blue;font-style: inherit;font-size: 50px;text-align: center">贷银宝系统</h2></div>
 <div style="width: 100%;height: 200px;float: left;padding-top: 10%;">

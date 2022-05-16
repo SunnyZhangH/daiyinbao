@@ -46,7 +46,6 @@ public class CustomerServiceImp implements ICustomerService {
 
     @Override
     public boolean CustomerLogin(CustomerInfo customerInfo) {
-
         return customerDao.findCustomer(customerInfo)!=null?true:false;
     }
 

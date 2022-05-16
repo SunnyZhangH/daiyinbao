@@ -11,20 +11,15 @@
 <head>
     <title>Title</title>
 </head>
-<body style="background-color:#dae8de">
+<body style="background: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 100%);">
 
-<div style="text-align: center;padding-top: 20%;">
+<div style="text-align: center;padding-top: 15%;">
     <div><strong style="color: green;font-style: inherit;font-size: 30px;text-align: center" id="time"></strong></div>
     <div><h2 style="color: blue;font-style: inherit;font-size: 50px;text-align: center">贷银宝系统</h2></div>
-<h2 style="color: blue;font-style: inherit;font-size: 30px;"><a href="huo_cun.jsp">活期</a>&nbsp;&nbsp;<a href="si_cun.jsp">死期</a>&nbsp;&nbsp; <a href="#">存借</a></h2>
-    <table>
-        <tr>
-            <th></th>
-        </tr>
-        <tr>
-            <td></td>
-        </tr>
-    </table>
+<%--<h2 style="color: blue;font-style: inherit;font-size: 30px;"><a href="huo_cun.jsp">活期</a>&nbsp;&nbsp;<a href="si_cun.jsp">死期</a>&nbsp;&nbsp; <a href="#">存借</a></h2>--%>
+    <c:forEach items="${goodsTypeInfoList}" var="type">
+        <a href="${pageContext.request.contextPath}/goodType/findTypeById?typeId=${type.typeId}"><h2 style="color: #6262cd;font-style: inherit;font-size: 30px;">${type.typeName}</h2></a>
+    </c:forEach>
 </div>
 
 <script>
