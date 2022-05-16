@@ -9,6 +9,7 @@ public interface ICustomerService {
        CustomerInfo findCustomerCardIdAndPwd(CustomerInfo customerInfo);
        CustomerInfo findCustomerById(CustomerInfo customerInfo);
        CustomerInfo findByCardId(CustomerInfo customerInfo);
+       CustomerInfo findByCustomerCardId(String customerCardId);
        List<CustomerInfo> findAllCustomer();
        boolean CustomerLogin(CustomerInfo customerInfo);
        boolean addCustomer(CustomerInfo customerInfo);

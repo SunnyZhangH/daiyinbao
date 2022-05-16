@@ -25,7 +25,9 @@ public class CustomerController {
     @RequestMapping("/customerLogin")
     public String customerLogin(CustomerInfo customerInfo, Model model, HttpSession session){
         if(customerService.CustomerLogin(customerInfo)){
-           session.setAttribute("customerInfo",customerService.CustomerLogin(customerInfo));
+            String cardID=customerInfo.getCustomerCardID();
+            session.setAttribute("cardID",cardID);
+            session.setAttribute("customerInfo",customerService.CustomerLogin(customerInfo));
 
            return "redirect:/goodType/findAll";
         }else{
@@ -36,7 +38,7 @@ public class CustomerController {
     @RequestMapping("showHome")
     public String showHome(CustomerInfo customerInfo,Model model){
         StringUtil stringUtil=new StringUtil();
-        String uuid=stringUtil.getRandomValue(6);
+        String uuid=stringUtil.getRandomValue(4);
         model.addAttribute("uuid",uuid);
         return "/reception/normal_user/user_login";
     }

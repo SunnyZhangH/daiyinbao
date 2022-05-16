@@ -34,6 +34,12 @@ public class CustomerServiceImp implements ICustomerService {
     public CustomerInfo findByCardId(CustomerInfo customerInfo) {
         return customerDao.findCustomer(customerInfo);
     }
+
+    @Override
+    public CustomerInfo findByCustomerCardId(String customerCardId) {
+        return customerDao.findByCustomerCardId(customerCardId);
+    }
+
     public void test(Model model){
         List<CustomerInfo> customerInfos=findAllCustomer();
 
