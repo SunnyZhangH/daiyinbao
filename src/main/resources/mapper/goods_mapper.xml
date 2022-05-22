@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neimeng.daiyinbao.cunqian.dao.IGoodsDao">
+    <resultMap id="goodsResultMap" type="com.neimeng.daiyinbao.cunqian.pojo.GoodsInfo">
+        <id column="goods_id" property="goodsId"/>
+        <result column="name" property="name"/>
+        <result column="introduction" property="introduction"/>
+        <result column="min_money" property="minMoney"/>
+        <result column="goods_time" property="goodsTime"/>
+        <result column="interest_rate" property="interestRate"/>
+        <result column="interest" property="interest"/>
+        <result column="total_money" property="totalMoney"/>
+        <result column="total_person" property="totalPerson"/>
+        <result column="goods_state" property="goodsState"/>
+        <result column="algorithm" property="algorithm"/>
+        <association property="goodsTypeInfo" column="type_id" javaType="com.neimeng.daiyinbao.cunqian.pojo.GoodsInfo">
+            <id column="type_id" property="typeId"/>
+            <result column="type_name" property="typeName"/>
+            <result column="type_state" property="state"/>
+            <result column="total_money" property="totalMoney"/>
+            <result column="total_person" property="totalPerson"/>
+        </association>
+    </resultMap>
+
+    <select id="findAllGoods" resultMap="goodsResultMap" resultType="java.util.List">
+        SELECT * FROM goods_info;
+    </select>
+
+    <select id="findGoodsById" resultMap="goodsResultMap">
+        SELECT * FROM goods_info WHERE goods_id=#{goodsId};
+    </select>
+
+    <insert id="addGoods">
+        INSERT INTO goods_info
+        VALUES (null,#{name},#{introduction},#{minMoney},#{goodsTime},#{interestRate},#{interest},
+        #{totalMoney},#{totalPerson},#{goodsState},#{typeInfo.typeId},#{algorithm});
+    </insert>
+
+    <update id="updateGoods">
+        update goods_info
+        <trim prefix="set" suffixOverrides=",">
+            <if test="name != null">name=#{name},</if>
+            <if test="introduction != null">introduction=#{introduction},</if>
+            <if test="minMoney != null">min_money=#{minMoney}</if>
+            <if test="goodsTime != null">goods_time=#{goodsTime},</if>
+            <if test="interestRate != null">interestRate=#{interestRate},</if>
+            <if test="interest != null">interest=#{interest},</if>
+            <if test="totalMoney != null">total_money=#{totalMoney},</if>
+            <if test="totalPerson != null">total_person=#{totalPerson},</if>
+            <if test="goodsState != null">goods_state=#{goodsState},</if>
+          <!--  <if test="typeId != null">type_id=#{typeId},</if>-->
+            <if test="algorithm != null">algorithm=#{algorithm}</if>
+        </trim>
+        where goods_id=#{goodsId}
+    </update>
+    <delete id="delGoods">
+        delete
+        from goods_info
+        where goods_id=#{goodsId}
+
+    </delete>
+</mapper>
