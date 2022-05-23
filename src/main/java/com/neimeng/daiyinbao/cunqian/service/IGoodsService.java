@@ -1,15 +1,17 @@
 package com.neimeng.daiyinbao.cunqian.service;
 
-import com.neimeng.daiyinbao.cunqian.pojo.CustomerInfo;
-import com.neimeng.daiyinbao.cunqian.pojo.GoodsTypeInfo;
+import com.neimeng.daiyinbao.cunqian.pojo.GoodsInfo;
 
 import java.util.List;
 
+/**
+ * @author fxkstart
+ * @create 2022-05-22 20:11
+ */
 public interface IGoodsService {
-
-       GoodsTypeInfo findGoodsType(GoodsTypeInfo goodsTypeInfo);
-       List<GoodsTypeInfo> findAllGoodsType();
-       boolean addGoodsType(GoodsTypeInfo goodsTypeInfo);
-       boolean updateGoodsType(GoodsTypeInfo goodsTypeInfo);
-       boolean delGoodsType(GoodsTypeInfo goodsTypeInfo);
+    List<GoodsInfo> findAllGoods();
+    GoodsInfo findGoodsById(GoodsInfo goodsInfo);
+    boolean addGoods(GoodsInfo goodsInfo);
+    boolean updateGoods(GoodsInfo goodsInfo);
+    boolean delGoods(GoodsInfo goodsInfo);
 }

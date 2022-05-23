@@ -1,7 +1,6 @@
-package com.neimeng.daiyinbao.cunqian.service;
+package com.neimeng.daiyinbao.people.service;
 
-import com.neimeng.daiyinbao.cunqian.pojo.CustomerInfo;
-import org.springframework.web.servlet.ModelAndView;
+import com.neimeng.daiyinbao.people.pojo.CustomerInfo;
 
 import java.util.List;
 

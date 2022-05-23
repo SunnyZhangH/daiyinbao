@@ -1,6 +1,5 @@
 package com.neimeng.daiyinbao.cunqian.dao;
 
-import com.neimeng.daiyinbao.cunqian.pojo.CustomerInfo;
 import com.neimeng.daiyinbao.cunqian.pojo.GoodsTypeInfo;
 import org.springframework.stereotype.Repository;
 

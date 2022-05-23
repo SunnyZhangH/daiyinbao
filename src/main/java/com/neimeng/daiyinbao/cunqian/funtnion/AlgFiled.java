@@ -96,5 +96,4 @@ public class AlgFiled {
     public static double getHuoLl() {
         return HUO_LL;
     }
-
 }

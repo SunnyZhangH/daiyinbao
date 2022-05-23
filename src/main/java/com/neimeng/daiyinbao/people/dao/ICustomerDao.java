@@ -1,9 +1,10 @@
-package com.neimeng.daiyinbao.cunqian.dao;
+package com.neimeng.daiyinbao.people.dao;
 
-import com.neimeng.daiyinbao.cunqian.pojo.CustomerInfo;
+import com.neimeng.daiyinbao.people.pojo.CustomerInfo;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+
 @Repository
 public interface ICustomerDao {
     CustomerInfo findCustomer(CustomerInfo customerInfo);
