@@ -54,7 +54,7 @@
                             <span class="nav-label">主页</span>
                         </a>
                     </li>
-                    <li>
+         <%--           <li>
                         <a href="#">
                             <i class="fa fa fa-bar-chart-o"></i>
                             <span class="nav-label">统计图表</span>
@@ -83,32 +83,32 @@
                                 <a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/graph_metrics.html">图表组合</a>
                             </li>
                         </ul>
-                    </li>
+                    </li>--%>
                     <li class="line dk"></li>
                     <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
-                        <span class="ng-scope">分类</span>
+                        <span class="ng-scope">管理员功能</span>
                     </li>
                     <li>
-                        <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">信箱 </span><span class="label label-warning pull-right">16</span></a>
+                        <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">待处理通知 </span><span class="label label-warning pull-right">16</span></a>
                         <ul class="nav nav-second-level">
-                            <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/mailbox.html">收件箱</a>
+                            <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/mailbox.html">待处理信息</a>
                             </li>
-                            <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/mail_detail.html">查看邮件</a>
+                            <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/mail_detail.html">详细处理信息</a>
                             </li>
-                            <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/mail_compose.html">写信</a>
+                            <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/mail_compose.html">回复信息</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">表单</span><span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">产品管理</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/form_basic.html">基本表单</a>
+                            <li><a class="J_menuItem" href="${pageContext.request.contextPath}/jsp/reception/normal_admin/add_cun_goods.jsp">添加存款产品</a>
                             </li>
-                            <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/form_validate.html">表单验证</a>
+                            <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/form_validate.html">添加存借款产品</a>
                             </li>
-                            <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/form_advanced.html">高级插件</a>
+                            <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/form_advanced.html">添加借款产品</a>
                             </li>
-                            <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/form_wizard.html">表单向导</a>
+                            <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/form_wizard.html">添加贷款产品</a>
                             </li>
                             <li>
                                 <a href="#">文件上传 <span class="fa arrow"></span></a>
@@ -139,16 +139,16 @@
                     <li>
                         <a href="#"><i class="fa fa-desktop"></i> <span class="nav-label">页面</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/contacts.html">联系人</a>
+                            <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/contacts.html">业务员管理</a>
                             </li>
                             <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/profile.html">个人资料</a>
                             </li>
                             <li>
-                                <a href="#">项目管理 <span class="fa arrow"></span></a>
+                                <a href="#">负责项目管理 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
-                                    <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/projects.html">项目</a>
+                                    <li><a class="J_menuItem" href="${pageContext.request.contextPath}/jsp/reception/normal_admin/all_goods.jsp">全部项目</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/project_detail.html">项目详情</a>
+                                    <li><a class="J_menuItem" href="${pageContext.request.contextPath}/jsp/reception/normal_admin/show_goods.jsp">项目详情</a>
                                     </li>
                                 </ul>
                             </li>
@@ -160,50 +160,50 @@
                             </li>
                             <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/file_manager.html">文件管理器</a>
                             </li>
-                            <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/calendar.html">日历</a>
+                            <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/calendar.html">打卡日历</a>
                             </li>
                             <li>
-                                <a href="#">博客 <span class="fa arrow"></span></a>
+                                <a href="#">公告管理 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
-                                    <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/blog.html">文章列表</a>
+                                    <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/blog.html">公告列表（发布公告）</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/article.html">文章详情</a>
+                                    <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/article.html">公告详情</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/faq.html">FAQ</a>
+                            <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/faq.html">无用</a>
                             </li>
                             <li>
                                 <a href="#">时间轴 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
-                                    <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/timeline.html">时间轴</a>
+                                    <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/timeline.html">无用时间轴</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/timeline_v2.html">时间轴v2</a>
+                                    <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/timeline_v2.html">无用时间轴v2</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/pin_board.html">标签墙</a>
+                            <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/pin_board.html">内部办公墙</a>
                             </li>
                             <li>
                                 <a href="#">单据 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
-                                    <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/invoice.html">单据</a>
+                                    <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/invoice.html">付款界面</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/invoice_print.html">单据打印</a>
+                                    <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/invoice_print.html">票据打印</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/search_results.html">搜索结果</a>
-                            </li>
-                            <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/forum_main.html">论坛</a>
-                            </li>
-                            <li>
+                          <%--  <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/search_results.html">搜索结果</a>
+                            </li>--%>
+                        <%--    <li><a class="J_menuItem" href="${pageContext.request.contextPath}/user_style/forum_main.html">论坛</a>
+                            </li>--%>
+                    <%--        <li>
                                 <a href="#">即时通讯 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
                                     <li><a class="J_menuItem" href="chat_view.html">聊天窗口</a>
                                     </li>
                                 </ul>
-                            </li>
+                            </li>--%>
                             <li>
                                 <a href="#">登录注册相关 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
@@ -227,10 +227,10 @@
                     </li>
                     <li class="line dk"></li>
                     <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
-                        <span class="ng-scope">分类</span>
+                        <span class="ng-scope">业务员功能</span>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-flask"></i> <span class="nav-label">UI元素</span><span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-flask"></i> <span class="nav-label">待处理功能</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li><a class="J_menuItem" href="typography.html">排版</a>
                             </li>
@@ -303,27 +303,27 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-table"></i> <span class="nav-label">表格</span><span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-table"></i> <span class="nav-label">客户处理</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a class="J_menuItem" href="table_basic.html">基本表格</a>
+                            <li><a class="J_menuItem" href="table_basic.html">示例0</a>
                             </li>
-                            <li><a class="J_menuItem" href="table_data_tables.html">DataTables</a>
+                            <li><a class="J_menuItem" href="table_data_tables.html">示例1</a>
                             </li>
-                            <li><a class="J_menuItem" href="table_jqgrid.html">jqGrid</a>
+                            <li><a class="J_menuItem" href="table_jqgrid.html">示例2</a>
                             </li>
-                            <li><a class="J_menuItem" href="table_foo_table.html">Foo Tables</a>
+                            <li><a class="J_menuItem" href="table_foo_table.html">待催人员</a>
                             </li>
-                            <li><a class="J_menuItem" href="table_bootstrap.html">Bootstrap Table
+                            <li><a class="J_menuItem" href="table_bootstrap.html">失信人员
                                 <span class="label label-danger pull-right">推荐</span></a>
                             </li>
                         </ul>
                     </li>
                     <li class="line dk"></li>
                     <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
-                        <span class="ng-scope">分类</span>
+                        <span class="ng-scope">客服员功能</span>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-picture-o"></i> <span class="nav-label">相册</span><span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-picture-o"></i> <span class="nav-label">待处理消息</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li><a class="J_menuItem" href="basic_gallery.html">基本图库</a>
                             </li>
@@ -334,12 +334,28 @@
                         </ul>
                     </li>
                     <li>
-                        <a class="J_menuItem" href="css_animation.html"><i class="fa fa-magic"></i> <span class="nav-label">CSS动画</span></a>
+                        <a class="J_menuItem" href="css_animation.html"><i class="fa fa-magic"></i> <span class="nav-label">业务沟通</span></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-cutlery"></i> <span class="nav-label">工具 </span><span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-cutlery"></i> <span class="nav-label">查看收益</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a class="J_menuItem" href="form_builder.html">表单构建器</a>
+                            <li><a class="J_menuItem" href="form_builder.html">资金走向</a>
+                            </li>
+                        </ul>
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="form_builder.html">存款资金</a>
+                            </li>
+                        </ul>
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="form_builder.html">借款资金</a>
+                            </li>
+                        </ul>
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="form_builder.html">融资资金</a>
+                            </li>
+                        </ul>
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="form_builder.html">待还资金</a>
                             </li>
                         </ul>
                     </li>
