@@ -18,7 +18,7 @@
     <div><h2 style="color: blue;font-style: inherit;font-size: 50px;text-align: center">贷银宝系统</h2></div>
 <%--<h2 style="color: blue;font-style: inherit;font-size: 30px;"><a href="huo_cun.jsp">活期</a>&nbsp;&nbsp;<a href="si_cun.jsp">死期</a>&nbsp;&nbsp; <a href="#">存借</a></h2>--%>
     <c:forEach items="${goodsTypeInfoList}" var="type">
-        <a href="${pageContext.request.contextPath}/goodType/findTypeById?typeId=${type.typeId}"><h2 style="color: #6262cd;font-style: inherit;font-size: 30px;">${type.typeName}</h2></a>
+        <a href="${pageContext.request.contextPath}/goodType/findTypeById?typeId=${type.typeId}"><p style="color: #6262cd;font-style: inherit;font-size: 30px;">${type.typeName}</p></a>
     </c:forEach>
 </div>
 
